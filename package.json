@@ -22,7 +22,8 @@
   "scripts": {
     "test": "mocha && ./node_modules/karma/bin/karma start",
     "bundle": "browserify --standalone PubSub index.js -o dist/isolda-pubsub.js",
-    "minify": "uglifyjs dist/isolda-pubsub.js --compress dead_code=true,unsafe=true,unused=true --mangle -o dist/isolda-pubsub.min.js"
+    "minify": "uglifyjs dist/isolda-pubsub.js --compress dead_code=true,unsafe=true,unused=true --mangle -o dist/isolda-pubsub.min.js",
+    "build": "npm run bundle && npm run minify"
   },
   "version": "1.0.0",
   "license": "MIT",
